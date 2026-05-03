@@ -1,0 +1,60 @@
+
+  <div class="container border">
+    <div class="row">
+      <div class="col-log-8 col-md-8 col-sm-12 border p-2 ">
+        <div class=" d-flex justify-content-between p-2">
+          <h2>Bread</h2>
+          <div>
+            <div class="burger__bun"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div>
+            <button (click)="breadAdding()" class="btn btn-primary m-2" [disabled]="isBreadAdded">add</button>
+            <button (click)="breadRemoving()" class="btn btn-primary m-2 " [disabled]="!isBreadAdded">remove</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between p-2">
+          <h2>lettuce</h2>
+          <div class="burger__lettuce"></div>
+          <div>
+            <button (click)="lettuceAdding()" class="btn btn-primary m-2" [disabled]="islettuce">add</button>
+            <button (click)="lettuceRemoving()" class="btn btn-primary m-2" [disabled]="!islettuceAdded">remove</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between p-2">
+          <h2>tomato</h2>
+          <div class="burger__tomato"></div>
+          <div>
+            <button (click)="tomatoAdding()" class="btn btn-primary m-2" [disabled]="isTomato">add</button>
+            <button (click)="tomatoRemoving()" class="btn btn-primary m-2" [disabled]="!isTomatoAdded">remove</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between p-2">
+          <h2>cheese</h2>
+          <div class="burger__cheese"></div>
+          <div>
+            <button (click)="cheeseAdding()" class="btn btn-primary m-2" [disabled]="isCheese">add</button>
+            <button (click)="cheeseRemoving()" class="btn btn-primary m-2" [disabled]="!isCheeseAdded">remove</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between p-2">
+          <h2>meat</h2>
+          <div class="burger__meat"></div>
+          <div>
+            <button (click)="meatAdding()"   class="btn btn-primary m-2 " [disabled]="isMeat">add</button>
+            <button (click)="meatRemoving()" class="btn btn-primary m-2"  [disabled]="!isMeatAdded">remove</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between p-2">
+          <h2>bread</h2>
+          <div class="burger__bun-bottom"></div>
+          <div>
+            <button (click)="breadAdding()" class="btn btn-primary m-2 " [disabled]="isBreadAdded">add</button>
+            <button (click)="breadRemoving()" class="btn btn-primary m-2" [disabled]="!isBreadAdded">remove</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-log-4 col-md-4 col-sm-12 border p-2">
+      </div>
+    </div>
+  </div>
+
