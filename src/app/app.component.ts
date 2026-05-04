@@ -28,64 +28,79 @@ counterCheese : number = 0;
 counterMeat : number = 0;
 breadAdding() {
   this.isBreadAdded = true;
+  this.isCheese=true;
+  this.islettuce=true;
+  this.isTomato=true;
+  this.isMeat=true;
 }
 breadRemoving() {
   this.isBreadAdded = false;
-}
-lettuceAdding() {
-  this.counterlettuce++;
-  this.islettuceAdded = true;
-  if (this.counterlettuce > 2) {
-    this.islettuce=true;
-  }
-}
-lettuceRemoving() {
-  this.counterlettuce--;
-  this.islettuce=false;
-  if (this.counterlettuce <= 0) {
-    this.islettuceAdded = false;
-  }
-}
-tomatoAdding() {
-  this.counterTomato++;
-  this.isTomatoAdded = true;
-  if (this.counterTomato > 2) {
-    this.isTomato = true;
-  }
-}
-tomatoRemoving() {
-  this.counterTomato--;
+  this.islettuceAdded = false;
+  this.islettuce = false;
+  this.isTomatoAdded = false;
   this.isTomato = false;
-  if (this.counterTomato <= 0) {
-    this.isTomatoAdded = false;
-  }
+  this.isCheeseAdded = false;
+  this.isCheese = false;
+  this.isMeatAdded = false;
+  this.isMeat = false;
 }
 cheeseAdding() {
   this.counterCheese++;
   this.isCheeseAdded = true;
   if (this.counterCheese > 2) {
-    this.isCheese = true;
+    this.isCheese = false;
   }
 }
 cheeseRemoving() {
   this.counterCheese--;
-  this.isCheese = false;
+  this.isCheese = true;
   if (this.counterCheese <= 0) {
     this.isCheeseAdded = false;
   }
 }
+lettuceAdding() {
+  this.counterlettuce++;
+  this.islettuceAdded = true;
+  if (this.counterlettuce > 2) {
+    this.islettuce=false;
+  }
+}
+lettuceRemoving() {
+  this.counterlettuce--;
+  this.islettuce=true;
+  if (this.counterlettuce <= 0) {
+    this.islettuceAdded = false;
+  }
+}
+
+tomatoAdding() {
+  this.counterTomato++;
+  this.isTomatoAdded = true;
+  if (this.counterTomato > 2) {
+    this.isTomato = false;
+  }
+}
+tomatoRemoving() {
+  this.counterTomato--;
+  this.isTomato = true;
+  if (this.counterTomato <= 0) {
+    this.isTomatoAdded = false;
+  }
+}
+
 meatAdding() {
   this.counterMeat++;
   this.isMeatAdded = true;
   if (this.counterMeat > 2) {
-    this.isMeat = true;
+    this.isMeat = false;
   }
 }
 meatRemoving() {
   this.counterMeat--;
-  this.isMeat = false;
+  this.isMeat = true;
   if (this.counterMeat <= 0) {
     this.isMeatAdded = false;
   }
 }
+
 }

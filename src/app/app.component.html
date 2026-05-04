@@ -1,7 +1,6 @@
-
-  <div class="container border">
+<div class="container border m-5">
     <div class="row">
-      <div class="col-log-8 col-md-8 col-sm-12 border p-2 ">
+      <div class="col-log-7 col-md-8 col-sm-12 border p-2 ">
         <div class=" d-flex justify-content-between p-2">
           <h2>Bread</h2>
           <div>
@@ -13,10 +12,18 @@
           </div>
         </div>
         <div class="d-flex justify-content-between p-2">
+          <h2>cheese</h2>
+          <div class="burger__cheese"></div>
+          <div>
+            <button (click)="cheeseAdding()" class="btn btn-primary m-2" [disabled]="!isCheese">add</button>
+            <button (click)="cheeseRemoving()" class="btn btn-primary m-2" [disabled]="!isCheeseAdded">remove</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between p-2">
           <h2>lettuce</h2>
           <div class="burger__lettuce"></div>
           <div>
-            <button (click)="lettuceAdding()" class="btn btn-primary m-2" [disabled]="islettuce">add</button>
+            <button (click)="lettuceAdding()" class="btn btn-primary m-2" [disabled]="!islettuce">add</button>
             <button (click)="lettuceRemoving()" class="btn btn-primary m-2" [disabled]="!islettuceAdded">remove</button>
           </div>
         </div>
@@ -24,23 +31,15 @@
           <h2>tomato</h2>
           <div class="burger__tomato"></div>
           <div>
-            <button (click)="tomatoAdding()" class="btn btn-primary m-2" [disabled]="isTomato">add</button>
+            <button (click)="tomatoAdding()" class="btn btn-primary m-2" [disabled]="!isTomato">add</button>
             <button (click)="tomatoRemoving()" class="btn btn-primary m-2" [disabled]="!isTomatoAdded">remove</button>
-          </div>
-        </div>
-        <div class="d-flex justify-content-between p-2">
-          <h2>cheese</h2>
-          <div class="burger__cheese"></div>
-          <div>
-            <button (click)="cheeseAdding()" class="btn btn-primary m-2" [disabled]="isCheese">add</button>
-            <button (click)="cheeseRemoving()" class="btn btn-primary m-2" [disabled]="!isCheeseAdded">remove</button>
           </div>
         </div>
         <div class="d-flex justify-content-between p-2">
           <h2>meat</h2>
           <div class="burger__meat"></div>
           <div>
-            <button (click)="meatAdding()"   class="btn btn-primary m-2 " [disabled]="isMeat">add</button>
+            <button (click)="meatAdding()"   class="btn btn-primary m-2 " [disabled]="!isMeat">add</button>
             <button (click)="meatRemoving()" class="btn btn-primary m-2"  [disabled]="!isMeatAdded">remove</button>
           </div>
         </div>
@@ -53,8 +52,90 @@
           </div>
         </div>
       </div>
-      <div class="col-log-4 col-md-4 col-sm-12 border p-2">
+      <div class="col-log-5 col-md-4 col-sm-12 border m-5 p-2 burger">
+        @if (isBreadAdded)
+        {
+          <div class="burger__bun"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        }
+        @if (isCheeseAdded)
+        {
+          @if(counterCheese === 1)
+          {
+            <div class="burger__cheese"></div>
+          }
+          @if(counterCheese === 2)
+          {
+            <div class="burger__cheese"></div>
+            <div class="burger__cheese"></div>
+          }
+          @if(counterCheese === 3)
+          {
+            <div class="burger__cheese"></div>
+            <div class="burger__cheese"></div>
+            <div class="burger__cheese"></div>
+          }
+        }
+        @if (islettuceAdded)
+        {
+          @if(counterlettuce === 1)
+          {
+            <div class="burger__lettuce"></div>
+          }
+          @if(counterlettuce === 2)
+          {
+            <div class="burger__lettuce"></div>
+            <div class="burger__lettuce"></div>
+          }
+          @if(counterlettuce === 3)
+          {
+            <div class="burger__lettuce"></div>
+            <div class="burger__lettuce"></div>
+            <div class="burger__lettuce"></div>
+          }
+
+
+        }
+        @if (isTomatoAdded)
+        {
+            @if(counterTomato === 1)
+            {
+              <div class="burger__tomato"></div>
+            }
+            @if(counterTomato === 2)
+            {
+              <div class="burger__tomato"></div>
+              <div class="burger__tomato"></div>
+            }
+            @if(counterTomato === 3)
+            {
+              <div class="burger__tomato"></div>
+              <div class="burger__tomato"></div>
+              <div class="burger__tomato"></div>
+            }
+        }
+        @if (isMeatAdded)
+        {
+          @if(counterMeat === 1)
+          {
+            <div class="burger__meat"></div>
+          }
+          @if(counterMeat === 2)
+          {
+            <div class="burger__meat"></div>
+            <div class="burger__meat"></div>
+          }
+          @if(counterMeat === 3)
+          {
+            <div class="burger__meat"></div>
+            <div class="burger__meat"></div>
+            <div class="burger__meat"></div>
+          }
+
+        }
+        @if (isBreadAdded)
+        {
+          <div class="burger__bun-bottom"></div>
+        }
       </div>
     </div>
   </div>
-
