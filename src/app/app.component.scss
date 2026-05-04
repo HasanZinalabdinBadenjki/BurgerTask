@@ -153,19 +153,13 @@ body {
 
 // ─── Burger ──────────────────────────────────────────────────────────────────
 
-.burger {
-  width: 22rem;
-  height: 22rem;
-  background-color: #FCF9E5;
-  border-radius: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: 19%;
-  top: 22.5%;
-  transform: translate3d(-50%, -50%, 0);
+  .burger {
+    width: 21rem;
+    height: 21rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #FCF9E5;
+    border-radius: 100%;
 
   &__bun {
     background-image: linear-gradient(#F9C82E, #F19A2B);
@@ -199,6 +193,7 @@ body {
   &__lettuce {
     width: 160px;
     height: 10px;
+    text-align: center;
     background-color: #85BA42;
     border-radius: 5px;
     border-top: 2px solid #78A83A;

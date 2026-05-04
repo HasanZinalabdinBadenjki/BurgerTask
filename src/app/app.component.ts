@@ -43,6 +43,10 @@ breadRemoving() {
   this.isCheese = false;
   this.isMeatAdded = false;
   this.isMeat = false;
+  this.counterTomato = 0;
+  this.counterlettuce = 0;
+  this.counterCheese = 0;
+  this.counterMeat = 0;
 }
 cheeseAdding() {
   this.counterCheese++;
